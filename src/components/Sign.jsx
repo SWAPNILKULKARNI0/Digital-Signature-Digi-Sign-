@@ -3,7 +3,9 @@ import '../assets/css/app.css'
 import SignatureCanvas from 'react-signature-canvas'
 import { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
-
+import { FaEraser } from "react-icons/fa";
+import { IoSave } from "react-icons/io5";
+import { FaDownload } from "react-icons/fa6";
 
 const Sign = () => {
 
@@ -45,11 +47,11 @@ const Sign = () => {
               deleteSpeed={30}
               delaySpeed={1000}
             /></h2>
-          <h5>Digi Sign is a digital signature web app that enables users to securely sign documents online.
+          <p>Digi Sign is a digital signature web app that enables users to securely sign documents online.
              It simplifies document signing processes for businesses and individuals by allowing electronic signatures on contracts, agreements, forms, and legal documents.
              From remote work collaborations to client onboarding and legal transactions, SignSecure ensures authenticity, compliance, and efficiency in document management.
-          </h5>
-          <h5>
+          </p>
+          <p>
           <Typewriter
               words={[' * Note : First click save then download the signature.']}
               loop={0}
@@ -61,7 +63,7 @@ const Sign = () => {
               deleteSpeed={30}
               delaySpeed={1000}
             />
-          </h5>
+          </p>
           
         </div>
       </div>
@@ -78,11 +80,16 @@ const Sign = () => {
         </div>
 
         <div className="btn">
-          <button id='clr' onClick={clearHandler} >Clear</button>
-          <button id='save' onClick={saveHandler}  >Save</button>
-          <button id='dwnd'><a href={result} download={result}>Download</a></button>
+          <button id='clr' onClick={clearHandler} ><FaEraser />  Clear</button>
+          <button id='save' onClick={saveHandler}  ><IoSave />  Save</button>
+          <button id='dwnd'><a href={result} download={result}><FaDownload />   Download</a></button>
         </div>
       </div>
+      <footer>
+        <p>
+          &copy; 2023 Digi Sign. All rights reserved.
+        </p>
+      </footer>
     </>
   );
 }

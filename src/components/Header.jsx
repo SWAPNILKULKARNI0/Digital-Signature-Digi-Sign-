@@ -4,11 +4,11 @@ import '../assets/css/app.css'
 const Header = () => {
     return (
         <>
-            <div>
-               <h1>Digi Sign</h1>
-            </div>
+            <header>
+                <h1>Digi Signature</h1>
+            </header>
         </>
-    )
+    )   
 }
 
 export default Header
